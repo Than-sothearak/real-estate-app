@@ -16,14 +16,14 @@ import { BsSearch } from "react-icons/bs";
 import { FiKey } from "react-icons/fi";
 const Navbar = () => {
   return (
-    <Flex  m={0} p="0" borderBottom="0" borderColor="gray.100">
-      <Box p='5'fontSize="3xl" color="blue.400" fontWeight="bold">
-        <Link href="/">
+    <Flex p="5" borderBottom="1px" borderColor="gray.100">
+      <Box fontSize="3xl" color="blue.400" fontWeight="bold">
+        <Link href="/" paddingLeft="2">
           Realtor
         </Link>
       </Box>
       <Spacer />
-      <Flex color="blue.500" p='0'>
+      <Flex color="blue.500">
         <Flex display={["none", "none", "flex", "flex"]}>
           <Link href="/" passHref>
             <Button
@@ -47,7 +47,7 @@ const Navbar = () => {
               Search
             </Button>
           </Link>
-          <Link href="/search?purpose=for-sale" passHref>
+          <Link href="/search?purpose=for-rent" passHref>
             <Button
               paddingLeft="5"
               variant="ghost"
@@ -58,7 +58,7 @@ const Navbar = () => {
               Buy Property
             </Button>
           </Link>
-          <Link href="/search?purpose=for-rent" passHref>
+          <Link href="/search?purpose=for-sale" passHref>
             <Button
               paddingLeft="5"
               variant="ghost"
@@ -70,10 +70,11 @@ const Navbar = () => {
             </Button>
           </Link>
         </Flex>
-        <Box paddingTop='5'display={["flex", "flex", "none", "none"]}>
+        <Box display={["flex", "flex", "none", "none"]}>
           <Menu
-          
             aria-label="Open menu"
+            size="lg"
+            mr={2}
           >
             <MenuButton
               as={IconButton}

@@ -24,7 +24,7 @@ export const Property = ({
 }) => {
   return (
     <Link href={`/property/${externalId}`} passHref>
-    <Flex flexWrap="wrap" p={5} paddingTop='10' marginTop='0' w={400} >
+    <Flex flexWrap="wrap" paddingTop='0' marginTop='0' w={400} >
       <Box h={290}>
         <Image src={coverPhoto ? coverPhoto.url : DefaultImage} width='400' height={300} alt='house'position= "absolute"/>
       </Box>

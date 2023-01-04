@@ -53,7 +53,7 @@ export async function getServerSideProps({ query }) {
   const rentFrequency = query.rentFrequency || 'yearly';
   const minPrice = query.minPrice || '0';
   const maxPrice = query.maxPrice || '1000000';
-  const roomsMin = query.roomMin || '0';
+  const roomMin = query.roomMin || '0';
   const bathsMin = query.bathsMin || '0';
   const sort = query.sort || 'price-desc';
   const areaMax = query.areaMax || '35000'

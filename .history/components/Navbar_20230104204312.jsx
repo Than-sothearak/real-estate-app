@@ -16,14 +16,14 @@ import { BsSearch } from "react-icons/bs";
 import { FiKey } from "react-icons/fi";
 const Navbar = () => {
   return (
-    <Flex  m={0} p="0" borderBottom="0" borderColor="gray.100">
+    <Flex display='relative'position= "fixed" m={0} p="0" borderBottom="0" borderColor="gray.100">
       <Box p='5'fontSize="3xl" color="blue.400" fontWeight="bold">
         <Link href="/">
           Realtor
         </Link>
       </Box>
       <Spacer />
-      <Flex color="blue.500" p='0'>
+      <Flex display='relative' color="blue.500" p='0'>
         <Flex display={["none", "none", "flex", "flex"]}>
           <Link href="/" passHref>
             <Button
@@ -47,7 +47,7 @@ const Navbar = () => {
               Search
             </Button>
           </Link>
-          <Link href="/search?purpose=for-sale" passHref>
+          <Link href="/search?purpose=for-rent" passHref>
             <Button
               paddingLeft="5"
               variant="ghost"
@@ -58,7 +58,7 @@ const Navbar = () => {
               Buy Property
             </Button>
           </Link>
-          <Link href="/search?purpose=for-rent" passHref>
+          <Link href="/search?purpose=for-sale" passHref>
             <Button
               paddingLeft="5"
               variant="ghost"

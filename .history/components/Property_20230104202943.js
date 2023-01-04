@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Box, Text, Avatar, Flex, Spacer } from "@chakra-ui/react";
+import { Box, Text, Avatar, Flex } from "@chakra-ui/react";
 import { FaBed, FaBath } from "react-icons/fa";
 import { BsGridFill } from "react-icons/bs";
 import { GoVerified } from "react-icons/go";
@@ -24,11 +24,10 @@ export const Property = ({
 }) => {
   return (
     <Link href={`/property/${externalId}`} passHref>
-    <Flex flexWrap="wrap" p={5} paddingTop='10' marginTop='0' w={400} >
-      <Box h={290}>
-        <Image src={coverPhoto ? coverPhoto.url : DefaultImage} width='400' height={300} alt='house'position= "absolute"/>
+    <Flex flexWrap="wrap" justifyContent="space-between" alignItems="center" m={10} marginTop='0' w={390}>
+      <Box h={280}>
+        <Image src={coverPhoto ? coverPhoto.url : DefaultImage} width={400} height={260} alt='house'/>
       </Box>
-      
       <Box w='full'>
         <Flex paddingTop='2' alignItems='center' justifyContent='space-between'>
           <Flex alignItems='center'>

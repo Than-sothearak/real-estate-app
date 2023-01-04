@@ -6,9 +6,7 @@ import { Box, Text, Button, Flex, Icon } from "@chakra-ui/react";
 import { SearchFilter } from "../components/SearchFilter";
 import { Property } from "../components/Property";
 import noResult from '../assets/no-result.jpg';
-import { baseUrl, fetchApi } from "../utils/fetchApi";
 const Search = ({ properties }) => {
-  
   const [searchFilter, setSearchFilter] = useState(false);
   const router = useRouter();
   
@@ -53,7 +51,7 @@ export async function getServerSideProps({ query }) {
   const rentFrequency = query.rentFrequency || 'yearly';
   const minPrice = query.minPrice || '0';
   const maxPrice = query.maxPrice || '1000000';
-  const roomsMin = query.roomMin || '0';
+  const roomMin = query.roomMin || '0';
   const bathsMin = query.bathsMin || '0';
   const sort = query.sort || 'price-desc';
   const areaMax = query.areaMax || '35000'

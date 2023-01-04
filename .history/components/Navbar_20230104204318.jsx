@@ -47,7 +47,7 @@ const Navbar = () => {
               Search
             </Button>
           </Link>
-          <Link href="/search?purpose=for-sale" passHref>
+          <Link href="/search?purpose=for-rent" passHref>
             <Button
               paddingLeft="5"
               variant="ghost"
@@ -58,7 +58,7 @@ const Navbar = () => {
               Buy Property
             </Button>
           </Link>
-          <Link href="/search?purpose=for-rent" passHref>
+          <Link href="/search?purpose=for-sale" passHref>
             <Button
               paddingLeft="5"
               variant="ghost"
